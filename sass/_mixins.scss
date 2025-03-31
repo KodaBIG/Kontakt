@@ -15,3 +15,9 @@
 }
 
 // działa to na zaszdie jak dodamy mixina będzie nadpisane urlem
+
+@mixin cardstyle {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
