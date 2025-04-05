@@ -379,6 +379,7 @@ body {
   color: #fff;
 }
 .offers__option {
+  border-radius: 7px;
   margin: 1em 0;
   box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
   background-color: #fff;
@@ -386,10 +387,168 @@ body {
 }
 .offers__option-img {
   width: 100%;
+  height: 65%;
   transition: transform 0.5s;
 }
 .offers__option-img:hover {
-  transform: scale(1.7);
+  transform: scale(1.1);
+}
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 10;
+}
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-style: 2.4rem;
+  font-weight: 300;
+}
+.offers__option-text {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+  color: #2e2e2e;
+}
+.offers__option-btn {
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #fff;
+  background-color: #1755e7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.offers__option::before {
+  background-color: #164dcc;
+}
+
+@media (max-width: 767px) {
+  .rewiews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 3em;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+  transition: transform 0.3s;
+}
+.reviews__box:hover {
+  transform: scale(0.95);
+}
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #1755e7;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-style: 1.4rem;
+  color: #2e2e2e;
+}
+
+.contact {
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+}
+.contact .white-block-left {
+  background-color: #2e2e2e;
+}
+.contact__form, .contact__form-top {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.contact__form-input {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+.contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  width: 100%;
+}
+.contact__form-btn {
+  margin-top: 2em;
+  align-self: flex-end;
+  padding: 1em;
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  background-color: #1755e7;
+  cursor: pointer;
+}
+.contact__form-btn::before {
+  background-color: #164dcc;
+}
+
+.footer {
+  color: #fff;
+  background-color: #2e2e2e;
+}
+.footer .wrapper {
+  padding: 6em 2em 2em;
+}
+.footer__box {
+  font-style: 1.4rem;
+}
+.footer__box-desktop {
+  display: none;
+}
+.footer__box-title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.footer__box-social {
+  margin: 2em 0 1em;
+}
+.footer__box-link {
+  font-size: 3.6rem;
+  color: #fff;
+  padding: 0 0.3em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__box-link:first-child {
+  padding-left: 0;
+}
+.footer__box-link:hover {
+  color: #eee;
+}
+.footer__bottom-text {
+  padding: 2em;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -412,6 +571,30 @@ body {
   .dreams__box__img {
     margin-bottom: 0;
     max-height: 300px;
+  }
+  .offers__option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-img--right {
+    order: 1;
+  }
+  .offers__option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.5em;
+    font-style: 3.6rem;
+  }
+  .offers__option-btn {
+    padding: 1em;
   }
 }
 @media (min-width: 768px) {
@@ -440,6 +623,13 @@ body {
   }
   .dreams .hero-img__text {
     font-size: 2.2rem;
+  }
+  .dreams .footer__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dreams .footer__box-desktop {
+    display: block;
   }
   .hero-img {
     padding: 40rem 2em;
@@ -477,5 +667,16 @@ body {
   }
   .dreams__text {
     font-size: 2.2rem;
+  }
+  .offers {
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hawaii-1034890_640.jpg");
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .offers__option-text {
+    font-style: 1.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
