@@ -72,6 +72,8 @@ body {
 
 // koniec burger ikonki
 
+
+
 // nav
 .nav {
 	position: fixed;
@@ -130,6 +132,14 @@ body {
 .nav-items-animations {
 	animation: navItemsAnimations 1s both;
 	// both wszystkie elementy z tą klasą rozpoczynać się z z form i kończyć się w to
+}
+
+
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
 }
 
 // header
@@ -515,16 +525,17 @@ body {
 
 	&__box-title {
 		margin-bottom: 1em;
-		font-size: 3rem;
+		font-size: 2rem;
 		text-transform: uppercase;
 	}
 
 	&__box-social {
 		margin: 2em 0 1em;
+		color: $light-white;
 	}
 
 	&__box-link {
-		font-size: 3.6rem;
+		font-size: 1.6rem;
 		color: $pure-white;
 		padding: 0 0.3em;
 		text-decoration: none;
@@ -635,6 +646,17 @@ body {
 				font-size: 2.2rem;
 			}
 		}
+	}
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box-desktop {
+			display: block;
+			font-size: 2em;
+		}
 
 		.footer {
 			&__boxes {
@@ -644,16 +666,29 @@ body {
 
 			&__box-desktop {
 				display: block;
+				font-size: 2em;
 			}
-		}
-	}
+			&__box {
+				margin: 0 2em;
+				width: 25%;
 
-	.hero-img {
-		padding: 40rem 2em;
-		background-image: $blue-gradient, url('../img/polynesia-3021072_640.jpg');
+				&-list {
+					font-size: 1.6rem;
+					list-style: none;
 
-		&__title {
-			font-size: 7.2rem;
+					&-item {
+						margin-bottom: 1em;
+						a {
+							color: $light-white;
+							text-decoration: none;
+						}
+					}
+				}
+
+				&:first-child {
+					width: 50%;
+				}
+			}
 		}
 	}
 }
